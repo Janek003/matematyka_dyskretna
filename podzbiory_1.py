@@ -45,3 +45,4 @@ for i in range(1, n+1):
 
 print("zbior analizowany: ", list_elementy_zbioru)
 print(f"zbior potęg {generate_zbior_podzbiorow()}")
+input()

@@ -48,6 +48,7 @@ def permute(index, curr_permutation):
 
 permute(0, curr_permutation)
 print(f'these are all {len(permutations)} permutations: {permutations}')
+input()
 
 
             
