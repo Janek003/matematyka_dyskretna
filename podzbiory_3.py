@@ -45,10 +45,10 @@ def permute(index, curr_permutation):
 
     return True
 
+print("Zestaw 1, zadanie 15")
+print("Napisz program, który dla zadanej liczby naturalnej n wypisze wszystkie permutacje zbioru {1, . . . , n}, to znaczy wszystkie sposoby uporządkowania elementów tego zbioru.")
 
 permute(0, curr_permutation)
 print(f'these are all {len(permutations)} permutations: {permutations}')
 input()
-
-
             

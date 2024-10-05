@@ -43,6 +43,9 @@ list_elementy_zbioru = []
 for i in range(1, n+1):
     list_elementy_zbioru.append(i)
 
+print("Zestaw 1, zadanie 14")
+print("Napisz program, który dla zadanej liczby naturalnej n oraz liczy k ∈ {1, . . . , n} wypisze wszystkie podzbiory k-elementowe zbiory {1, . . . , n}.")
+
 print("zbior analizowany: ", list_elementy_zbioru)
 print(f"zbior poteg o {k} elementach {generate_zbior_podzbiorow()}")
 input()

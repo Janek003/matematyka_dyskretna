@@ -43,6 +43,9 @@ list_elementy_zbioru = []
 for i in range(1, n+1):
     list_elementy_zbioru.append(i)
 
+print("Zestaw 1, zadanie 13")
+print("Napisz program, który dla zadanej liczy naturalnej n wypisze wszystkie podzbiory zbioru {1, 2, . . . , n}.")
+
 print("zbior analizowany: ", list_elementy_zbioru)
 print(f"zbior potęg {generate_zbior_podzbiorow()}")
 input()
