@@ -11,8 +11,10 @@
 # then we have a list with all digits that are indexes of numbers that we must use in a podzbior, we append a list by those and append a metalist with that list, then repeat for next binary number
 
 # kontynuujemy loop tak długo aż len(str(binary_counter))-2 nie będzie większa od n
+import time
 print("Zestaw 1, zadanie 13")
 print("Napisz program, który dla zadanej liczy naturalnej n wypisze wszystkie podzbiory zbioru {1, 2, . . . , n}.")
+print("time complexity O(2^n)")
 
 def generate_podzbior(binary_number):
     list_of_indexes = []
@@ -33,11 +35,8 @@ def generate_number_to_count_to():
     return(result)
 
 def generate_zbior_podzbiorow():
-    zbior_podzbiorow = []
     for non_binary_int in range(generate_number_to_count_to()+1):
-        zbior_podzbiorow.append(generate_podzbior(non_binary_int))
-    return zbior_podzbiorow
-    
+        generate_podzbior(non_binary_int)
 
 n = int(input('Enter a value for n: '))
 
@@ -45,8 +44,10 @@ list_elementy_zbioru = []
 for i in range(1, n+1):
     list_elementy_zbioru.append(i)
 
+print(f"wszystkie podzbiory zbioru {list_elementy_zbioru}: ", )
 
+start_time = time.time()
+generate_zbior_podzbiorow()
+print("--- %s seconds ---" % (time.time() - start_time))
 
-print("zbior analizowany: ", list_elementy_zbioru)
-print(f"zbior potęg {generate_zbior_podzbiorow()}")
 input()
