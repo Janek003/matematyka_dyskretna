@@ -15,8 +15,6 @@ n = int(input('n: '))
 for i in range(1, n+1):
     numbers.append(i)
 
-permutations = []
-
 print(f'calculating all permutations of a following list: {numbers}')
 
 curr_permutation = []
@@ -34,7 +32,7 @@ def permute(index, curr_permutation):
     # wtedy appenduje liste permutation tą liczbą i zwraca fałsz cofając do poprzedniego aż wykorzystane zostaną wszystkie opcje
     if index == n:
         # print(curr_permutation, 'HERE')
-        permutations.append(curr_permutation.copy())
+        print(curr_permutation)
         # print(permutations)
         # The issue you're encountering stems from the fact that in Python, lists are mutable objects, and when you append a list to another list, it appends the reference to the list, not a copy of it. So, when you modify curr_permutation, it affects all previously appended instances of it in permutations, because they all point to the same list in memory.curr_permutation[index] = 0
         
@@ -48,9 +46,5 @@ def permute(index, curr_permutation):
 
     return True
 
-
-
 permute(0, curr_permutation)
-print(f'these are all {len(permutations)} permutations: {permutations}')
 input()
-            
