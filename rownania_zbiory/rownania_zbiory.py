@@ -1,7 +1,7 @@
 import subprocess
 import os
 
-def main():
+def main():#errro with getting a path after moving it into a folder
     current_path = os.getcwd()
     script_file_name = "zbiory_hotkey.exe"
 
