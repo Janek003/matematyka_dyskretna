@@ -11,6 +11,7 @@
 # then we have a list with all digits that are indexes of numbers that we must use in a podzbior, we append a list by those and append a metalist with that list, then repeat for next binary number
 
 # kontynuujemy loop tak długo aż len(str(binary_counter))-2 nie będzie większa od n
+# very important -> use f2 i think - to replace variable names globaly
 import time
 print("Zestaw 1, zadanie 13")
 print("Napisz program, który dla zadanej liczy naturalnej n wypisze wszystkie podzbiory zbioru {1, 2, . . . , n}.")
