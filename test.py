@@ -13,3 +13,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+#reads a string and checks if its using correct characters
+#deletes all white space
+#before '=' string L, after string R
+#some sort of statment analasys,where statements are extracted from inside brackets
