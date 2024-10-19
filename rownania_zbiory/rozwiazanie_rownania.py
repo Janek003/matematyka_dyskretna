@@ -29,7 +29,7 @@ for i in range(ilosc_zmiennych):
 
 print("___________")
 
-is_correct = True
+is_correct = "tożsamość"
 
 for item in cartesian_product:
     
@@ -40,6 +40,6 @@ for item in cartesian_product:
     print(f"{str(eval(lewa_storna)).ljust(5)} | {str(eval(prawa_storna)).ljust(5)}")
 
     if eval(lewa_storna) != eval(prawa_storna):
-        is_correct = False
+        is_correct = "sprzeczność"
 
-print(f"\nwartosc logiczna tozsamosci: {is_correct}")
+print(f"\n{is_correct}")
