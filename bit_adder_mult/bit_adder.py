@@ -15,24 +15,11 @@ for i in range(max(a_len, b_len)):
     b = (_b >> i) & 1 # value of bit (form b) nr 'i' looking from right
     c = carry_out # c inaczej carry in
     
-    #na = a ^ 1 # not(a)
-    #nb = b ^ 1 # not(b)
-    #nc = c ^ 1 # not(c)
-    
-    #sum = (a & b & c)|(na & nb & c)|(na & b & nc)|(a & nb & nc)
     sum = (a ^ b) ^ c
-
-    #carry_out = (a & b & c)|(a & b & nc)|(a & nb & c)|(na & b & c)
     carry_out = (a & b) | ((a ^ b) & c)
     
-    wynik = f'{str(sum)}{wynik}'
+    wynik = str(sum) + wynik
     
-    #print(f'\ni: {i}\n_a = {_a}, _b = {_b}, carry in = {_c} \nsum: {sum}, carry_out = {carry_out}, wynik: {wynik}')
-    
-if carry_out == 1: wynik=f'{str(carry_out)}{wynik}' # dodajemy ostatnie carry out
-#print(f'\nadded last carry out of {carry_out} and got {wynik}')
-
-#print(f'\na = {a} (binary: {bin(a)})')
-#print(f'b = {b} (binary: {bin(b)})')
+if carry_out == 1: wynik=str(carry_out)+wynik # dodajemy ostatnie carry out
 
 print(f'\nSuma (a + b): {int(wynik, 2)} (binary: {wynik})')
