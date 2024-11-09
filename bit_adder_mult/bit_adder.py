@@ -13,14 +13,17 @@ for i in range(max(a_len, b_len)):
 
     a = (_a >> i) & 1 # value of bit (from a) nr 'i' looking from right
     b = (_b >> i) & 1 # value of bit (form b) nr 'i' looking from right
-    c = carry_out # c -> carry in
+    c = carry_out # c inaczej carry in
     
-    na = a ^ 1 # not(a)
-    nb = b ^ 1 # not(b)
-    nc = c ^ 1 # not(c)
+    #na = a ^ 1 # not(a)
+    #nb = b ^ 1 # not(b)
+    #nc = c ^ 1 # not(c)
     
-    sum = (a & b & c)|(na & nb & c)|(na & b & nc)|(a & nb & nc)
-    carry_out = (a & b & c)|(a & b & nc)|(a & nb & c)|(na & b & c)
+    #sum = (a & b & c)|(na & nb & c)|(na & b & nc)|(a & nb & nc)
+    sum = (a ^ b) ^ c
+
+    #carry_out = (a & b & c)|(a & b & nc)|(a & nb & c)|(na & b & c)
+    carry_out = (a & b) | ((a ^ b) & c)
     
     wynik = f'{str(sum)}{wynik}'
     
