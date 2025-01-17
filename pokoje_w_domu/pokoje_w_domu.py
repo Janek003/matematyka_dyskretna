@@ -46,7 +46,7 @@ def wynik(file_name):
         i = etapy % len(schemat)
         wybrane_drzwi = schemat[i]
 
-        curr_move = [wybrane_drzwi, pokoje]
+        curr_move = [i, pokoje]
         
         if curr_move in tried_moves: return "NIE"
 
